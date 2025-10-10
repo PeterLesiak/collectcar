@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+pnpm-lock.yaml
+
+# assets
+/public
+
+# build
+/dist
+/.next
+tsconfig.tsbuildinfo
+
+# generated types
+.next-env.d.ts
