@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "next build --turbopack",
-    "start": "next start",
+    "preview": "next start",
     "dev": "next dev --turbopack",
     "lint": "tsc",
     "format": "prettier . --write"
@@ -28,5 +28,6 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
 }

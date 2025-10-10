@@ -201,7 +201,7 @@ export default function Home() {
         width: 800,
         height: 360,
         x: (window.innerWidth - 800) / 2,
-        y: 40,
+        y: 60,
       },
       engine: {
         width: 800,

@@ -43,7 +43,7 @@ export const cars: Car[] = [
         '3DWheel_Rear_R',
       ],
       scale: 110,
-      offset: [-0.3, 0, 0],
+      offset: [-0.1, 0, 0],
     },
   },
   {
@@ -113,7 +113,7 @@ export const cars: Car[] = [
       modelPath: '/models/ferrari_f50_gt.glb',
       wheelNames: ['Wheel1A_LF', 'Wheel1A_RF', 'Wheel1A_LR', 'Wheel1A_RR'],
       scale: 1.1,
-      offset: [-0.1, 0, 0],
+      offset: [-0.15, 0, 0],
     },
   },
   {
@@ -128,7 +128,7 @@ export const cars: Car[] = [
         '3DWheel_Rear_R',
       ],
       scale: 95,
-      offset: [-0.3, 0, 0],
+      offset: [-0.31, 0, 0],
     },
   },
 ];

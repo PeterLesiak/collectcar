@@ -5,7 +5,7 @@ import PageLayout from '@/layouts/PageLayout';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Buy - collectcar.',
+  title: 'Home - collectcar.',
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
