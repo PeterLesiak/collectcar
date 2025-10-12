@@ -1,4 +1,10 @@
+import type { CarDetails } from '@/carDetails';
 import type { Car } from '@/lib/Car';
+
+export type CarReference = {
+  carIndex: number;
+  details: CarDetails;
+};
 
 export const cars: Car[] = [
   {

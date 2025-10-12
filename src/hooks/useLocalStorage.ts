@@ -2,12 +2,12 @@ import { useEffect, useState, type Dispatch, type SetStateAction } from 'react';
 
 export function useLocalStorage<T>(
   key: string,
-): [T | undefined, SetStateAction<Dispatch<T | undefined>>];
+): [T | undefined, Dispatch<SetStateAction<T | undefined>>];
 
 export function useLocalStorage<T>(
   key: string,
   defaultValue: T,
-): [T, SetStateAction<Dispatch<T>>];
+): [T, Dispatch<SetStateAction<T>>];
 
 export function useLocalStorage<T>(
   key: string,
@@ -18,7 +18,7 @@ export function useLocalStorage<T>(
   useEffect(() => {
     const value = localStorage.getItem(key);
 
-    setState(value ? JSON.parse(value) : undefined);
+    setState(value ? JSON.parse(value) : defaultValue);
   }, [key]);
 
   useEffect(() => {

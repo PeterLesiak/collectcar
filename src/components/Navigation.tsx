@@ -6,6 +6,7 @@ import { Handbag } from 'lucide-react';
 
 import { poppins } from '@/app/fonts';
 import { cn } from '@/lib/utils';
+import { useShoppingCart } from '@/contexts/ShoppingCartContext';
 
 export default function Navigation({ className, ...props }: ComponentProps<'nav'>) {
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -33,6 +34,8 @@ export default function Navigation({ className, ...props }: ComponentProps<'nav'
 
     return () => controller.abort();
   }, []);
+
+  const { cart } = useShoppingCart();
 
   return (
     <nav
@@ -98,9 +101,9 @@ export default function Navigation({ className, ...props }: ComponentProps<'nav'
 
         <div className="absolute -bottom-3.5 -left-3 rounded-full bg-black p-0.5">
           <span
-            className={`${poppins.className} grid size-5.5 place-items-center rounded-full bg-red-500 text-sm font-medium text-white transition duration-500 group-hover:bg-white group-hover:text-neutral-950`}
+            className={`${poppins.className} grid size-5.5 place-items-center rounded-full bg-red-500 text-sm font-semibold text-white transition duration-500 group-hover:bg-white group-hover:text-neutral-950`}
           >
-            3
+            {cart.length}
           </span>
         </div>
       </Link>

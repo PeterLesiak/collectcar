@@ -23,6 +23,7 @@ import {
   defaultCarDetails,
   type CarDetails,
 } from '@/carDetails';
+import { useShoppingCart } from '@/contexts/ShoppingCartContext';
 import {
   CarSelectionScene,
   type CarPresentationState,
@@ -235,6 +236,8 @@ export default function Home() {
 
   const [carDetails, setCarDetails] = useState<CarDetails>(defaultCarDetails);
 
+  const { addToCart } = useShoppingCart();
+
   return (
     <>
       <canvas ref={canvasRef} className="absolute z-10 h-dvh w-dvw"></canvas>
@@ -330,7 +333,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <button className="relative flex w-full cursor-pointer items-center justify-center gap-3 rounded-md bg-teal-300 py-3 text-black shadow-[0_6px_0_0] shadow-teal-600 transition ease-out hover:brightness-125 active:translate-y-2 active:shadow-none">
+              <button
+                onClick={() => addToCart({ carIndex: carIndex!, details: carDetails })}
+                className="relative flex w-full cursor-pointer items-center justify-center gap-3 rounded-md bg-teal-300 py-3 text-black shadow-[0_6px_0_0] shadow-teal-600 transition ease-out hover:brightness-125 active:translate-y-2 active:shadow-none"
+              >
                 <ShoppingBasket />
                 <span className="font-semibold">Add to cart</span>
               </button>
