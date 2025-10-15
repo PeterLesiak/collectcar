@@ -93,7 +93,7 @@ export default function Navigation({ className, ...props }: ComponentProps<'nav'
       </div>
 
       <Link
-        href="/"
+        href="/shopping-cart"
         aria-label="Shopping cart"
         className="group relative grid aspect-square place-items-center rounded-full bg-white p-2 transition duration-500 hover:bg-neutral-950"
       >
