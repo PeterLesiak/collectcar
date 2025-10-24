@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo } from 'react';
 import { Trash2 } from 'lucide-react';
 
@@ -26,7 +27,7 @@ export default function ShoppingCart() {
       <div className="flex h-min flex-col gap-5 rounded-md bg-neutral-950 p-10">
         <h2 className="mb-5 text-center text-3xl font-semibold">Shopping cart</h2>
 
-        <div className="grid max-h-[45vh] gap-12 overflow-scroll rounded-md bg-neutral-900 px-10 py-6">
+        <div className="grid max-h-[45vh] gap-12 overflow-y-scroll rounded-md bg-neutral-900 px-10 py-6">
           {cart.map((item, index) => (
             <div
               className="grid grid-cols-[1fr_4fr_1fr] place-items-center gap-10"
@@ -76,7 +77,7 @@ export default function ShoppingCart() {
           ))}
         </div>
 
-        <span className="h-[2px] w-full rounded-full bg-indigo-300"></span>
+        <span className="h-[2px] w-full rounded-full bg-indigo-500"></span>
 
         <div className="flex items-center justify-between rounded-md border-2 border-indigo-500 bg-indigo-500/20 p-4">
           <span className="flex items-center font-medium">
@@ -85,9 +86,11 @@ export default function ShoppingCart() {
             <span className="font-semibold">{formatPrice(cartCost)}</span>
           </span>
 
-          <button className="cursor-pointer rounded-sm bg-indigo-500/50 px-6 py-2 font-semibold transition hover:brightness-125">
-            Order now
-          </button>
+          <Link href="/order">
+            <button className="cursor-pointer rounded-sm bg-indigo-500/50 px-6 py-2 font-semibold transition hover:brightness-125">
+              Order now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
