@@ -23,9 +23,6 @@ cd ./collectcar
 **Install dependencies:**
 
 ```sh
-# If you have corepack enabled
-corepack install
-
 pnpm install
 ```
 

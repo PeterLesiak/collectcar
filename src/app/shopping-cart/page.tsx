@@ -86,7 +86,7 @@ export default function ShoppingCart() {
             <span className="font-semibold">{formatPrice(cartCost)}</span>
           </span>
 
-          <Link href="/order">
+          <Link href="/shopping-cart">
             <button className="cursor-pointer rounded-sm bg-indigo-500/50 px-6 py-2 font-semibold transition hover:brightness-125">
               Order now
             </button>

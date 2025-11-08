@@ -484,6 +484,8 @@ export class CarSelectionScene {
     this.postProcessing.render();
 
     if (this.renderer._isDeviceLost) return this;
+    if (this.offscreenCanvas.width == 0 || this.offscreenCanvas.height == 0) return this;
+
     this.context.drawImage(this.offscreenCanvas, 0, 0);
 
     return this;
