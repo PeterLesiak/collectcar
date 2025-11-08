@@ -8,7 +8,7 @@ import {
   type DataTexture,
   type Object3DEventMap,
 } from 'three/webgpu';
-import { add, mul, ShaderNodeObject } from 'three/tsl';
+import { add, mul } from 'three/tsl';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
 
@@ -30,7 +30,7 @@ export async function loadModel(path: string): Promise<Group<Object3DEventMap>> 
 
 // https://www.desmos.com/calculator/niymgzgvov
 export const quadraticCurve = (
-  x: ShaderNodeObject<Node>,
+  x: Node,
   a: number,
   p: number,
   q: number,
